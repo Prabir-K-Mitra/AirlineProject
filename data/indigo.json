@@ -1,0 +1,9 @@
+{
+  "name": "IndiGo",
+  "flights": [
+    { "from": "DOH", "to": "DEL", "fromCoords": [25.2731, 51.6081], "toCoords": [28.5562, 77.1000] },
+    { "from": "DEL", "to": "BLR", "fromCoords": [28.5562, 77.1000], "toCoords": [13.1979, 77.7063] },
+    { "from": "BLR", "to": "DEL", "fromCoords": [13.1979, 77.7063], "toCoords": [28.5562, 77.1000] }
+  ]
+}
+
