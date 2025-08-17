@@ -88,12 +88,6 @@
     {
       "from": "Chennai (MAA)",
       "fromCoords": [12.9941, 80.1709],
-      "to": "Bhubaneswar (BBI)",
-      "toCoords": [20.2444, 85.8178]
-    },
-    {
-      "from": "Bhubaneswar (BBI)",
-      "fromCoords": [20.2444, 85.8178],
       "to": "Kolkata (CCU)",
       "toCoords": [22.652, 88.4467]
     },
@@ -120,6 +114,10 @@
     {
       "name": "Doha (DOH)",
       "coords": [25.2736, 51.6081]
+    },
+    {
+      "name": "Bhubaneswar (BBI)",
+      "coords": [13.1986, 77.7066]
     }
   ]
 }
