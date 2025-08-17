@@ -1,0 +1,19 @@
+{
+  "name": "Finnair",
+  "flights": [
+    {
+      "from": "Vienna (VIE)",
+      "fromCoords": [48.1103, 16.5697],
+      "to": "Helsinki (HEL)",
+      "toCoords": [60.3172, 24.9633]
+    },
+    {
+      "from": "Helsinki (HEL)",
+      "fromCoords": [60.3172, 24.9633],
+      "to": "Rovaniemi (RVN)",
+      "toCoords": [66.5648, 25.8304]
+    }
+  ],
+  "transit": []
+}
+

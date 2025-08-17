@@ -1,0 +1,13 @@
+{
+  "name": "Sky Express",
+  "flights": [
+    {
+      "from": "Athens (ATH)",
+      "fromCoords": [37.9364, 23.9445],
+      "to": "Vienna (VIE)",
+      "toCoords": [48.1103, 16.5697]
+    }
+  ],
+  "transit": []
+}
+

@@ -1,0 +1,12 @@
+{
+  "name": "Air France",
+  "flights": [
+    {
+      "from": "Paris Charles de Gaulle (CDG)",
+      "fromCoords": [49.0097, 2.5479],
+      "to": "Vienna (VIE)",
+      "toCoords": [48.1103, 16.5697]
+    }
+  ]
+}
+

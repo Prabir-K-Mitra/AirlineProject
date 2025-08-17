@@ -1,0 +1,42 @@
+{
+  "name": "SpiceJet",
+  "flights": [
+    {
+      "from": "Kolkata (CCU)",
+      "fromCoords": [22.652, 88.4467],
+      "to": "Delhi (DEL)",
+      "toCoords": [28.5562, 77.1000]
+    },
+    {
+      "from": "Udaipur (UDR)",
+      "fromCoords": [24.6177, 73.8961],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    },
+    {
+      "from": "Pune (PNQ)",
+      "fromCoords": [18.5793, 73.9089],
+      "to": "Ahmedabad (AMD)",
+      "toCoords": [23.0772, 72.6347]
+    },
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Udaipur (UDR)",
+      "toCoords": [24.6177, 73.8961]
+    },
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    }
+  ],
+  "transit": [
+    {
+      "name": "Jaipur (JAI)",
+      "coords": [26.8242, 75.8122]
+    }
+  ]
+}
+

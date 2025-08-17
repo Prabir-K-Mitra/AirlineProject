@@ -1,9 +1,127 @@
 {
   "name": "IndiGo",
   "flights": [
-    { "from": "DOH", "to": "DEL", "fromCoords": [25.2731, 51.6081], "toCoords": [28.5562, 77.1000] },
-    { "from": "DEL", "to": "BLR", "fromCoords": [28.5562, 77.1000], "toCoords": [13.1979, 77.7063] },
-    { "from": "BLR", "to": "DEL", "fromCoords": [13.1979, 77.7063], "toCoords": [28.5562, 77.1000] }
+    {
+      "from": "Abu Dhabi (AUH)",
+      "fromCoords": [24.433, 54.6511],
+      "to": "New Delhi (DEL)",
+      "toCoords": [28.5562, 77.1000]
+    },
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    },
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Udaipur (UDR)",
+      "toCoords": [24.6177, 73.8961]
+    },
+    {
+      "from": "Udaipur (UDR)",
+      "fromCoords": [24.6177, 73.8961],
+      "to": "Delhi (DEL)",
+      "toCoords": [28.5562, 77.1000]
+    },
+    {
+      "from": "Kolkata (CCU)",
+      "fromCoords": [22.652, 88.4467],
+      "to": "Ahmedabad (AMD)",
+      "toCoords": [23.0738, 72.6347]
+    },
+    {
+      "from": "Ahmedabad (AMD)",
+      "fromCoords": [23.0738, 72.6347],
+      "to": "Delhi (DEL)",
+      "toCoords": [28.5562, 77.1000]
+    },
+    {
+      "from": "Kolkata (CCU)",
+      "fromCoords": [22.652, 88.4467],
+      "to": "Delhi (DEL)",
+      "toCoords": [28.5562, 77.1000]
+    },
+    {
+      "from": "Ahmedabad (AMD)",
+      "fromCoords": [23.0738, 72.6347],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    },
+    {
+      "from": "Kolkata (CCU)",
+      "fromCoords": [22.652, 88.4467],
+      "to": "Hyderabad (HYD)",
+      "toCoords": [17.2403, 78.4294]
+    },
+    {
+      "from": "Mumbai (BOM)",
+      "fromCoords": [19.0896, 72.8656],
+      "to": "Udaipur (UDR)",
+      "toCoords": [24.6177, 73.8961]
+    },
+    {
+      "from": "Indore (IDR)",
+      "fromCoords": [22.7218, 75.8011],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    },
+    {
+      "from": "Ahmedabad (AMD)",
+      "fromCoords": [23.0738, 72.6347],
+      "to": "Pune (PNQ)",
+      "toCoords": [18.5821, 73.9197]
+    },
+    {
+      "from": "Hyderabad (HYD)",
+      "fromCoords": [17.2403, 78.4294],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    },
+    {
+      "from": "Ahmedabad (AMD)",
+      "fromCoords": [23.0738, 72.6347],
+      "to": "Hyderabad (HYD)",
+      "toCoords": [17.2403, 78.4294]
+    },
+    {
+      "from": "Chennai (MAA)",
+      "fromCoords": [12.9941, 80.1709],
+      "to": "Bhubaneswar (BBI)",
+      "toCoords": [20.2444, 85.8178]
+    },
+    {
+      "from": "Bhubaneswar (BBI)",
+      "fromCoords": [20.2444, 85.8178],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    },
+    {
+      "from": "Bangalore (BLR)",
+      "fromCoords": [13.1986, 77.7066],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    },
+    {
+      "from": "Udaipur (UDR)",
+      "fromCoords": [24.6177, 73.8961],
+      "to": "Bangalore (BLR)",
+      "toCoords": [13.1986, 77.7066]
+    },
+    {
+      "from": "Vadodara (BDQ)",
+      "fromCoords": [22.3362, 73.2263],
+      "to": "Bangalore (BLR)",
+      "toCoords": [13.1986, 77.7066]
+    }
+  ],
+  "transit": [
+    {
+      "name": "Doha (DOH)",
+      "coords": [25.2736, 51.6081]
+    }
   ]
 }
+
 

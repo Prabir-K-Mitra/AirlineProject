@@ -1,0 +1,18 @@
+{
+  "name": "AirAsia",
+  "flights": [
+    {
+      "from": "Kolkata (CCU)",
+      "fromCoords": [22.652, 88.4467],
+      "to": "Delhi (DEL)",
+      "toCoords": [28.5562, 77.1000]
+    },
+    {
+      "from": "Bagdogra (IXB)",
+      "fromCoords": [26.6812, 88.3286],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    }
+  ]
+}
+

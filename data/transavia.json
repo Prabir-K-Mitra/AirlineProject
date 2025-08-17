@@ -1,0 +1,12 @@
+{
+  "name": "Transavia",
+  "flights": [
+    {
+      "from": "Vienna (VIE)",
+      "fromCoords": [48.1103, 16.5697],
+      "to": "Paris Orly (ORY)",
+      "toCoords": [48.7233, 2.3794]
+    }
+  ]
+}
+
