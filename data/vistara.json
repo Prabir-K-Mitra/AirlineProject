@@ -1,0 +1,13 @@
+{
+  "name": "Vistara",
+  "flights": [
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.6547, 88.4467]
+    }
+  ],
+  "transit": []
+}
+

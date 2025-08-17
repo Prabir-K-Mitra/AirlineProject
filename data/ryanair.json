@@ -1,0 +1,13 @@
+{
+  "name": "Ryanair",
+  "flights": [
+    {
+      "from": "Vienna (VIE)",
+      "fromCoords": [48.1103, 16.5697],
+      "to": "Malaga (AGP)",
+      "toCoords": [36.6749, -4.4991]
+    }
+  ],
+  "transit": []
+}
+

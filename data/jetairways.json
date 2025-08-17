@@ -1,0 +1,36 @@
+{
+  "name": "Jet Airways",
+  "flights": [
+    {
+      "from": "Mumbai (BOM)",
+      "fromCoords": [19.0896, 72.8656],
+      "to": "Udaipur (UDR)",
+      "toCoords": [24.6177, 73.8961]
+    },
+    {
+      "from": "Udaipur (UDR)",
+      "fromCoords": [24.6177, 73.8961],
+      "to": "Delhi (DEL)",
+      "toCoords": [28.5562, 77.1000]
+    },
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
+    },
+    {
+      "from": "Kolkata (CCU)",
+      "fromCoords": [22.652, 88.4467],
+      "to": "Delhi (DEL)",
+      "toCoords": [28.5562, 77.1000]
+    },
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Udaipur (UDR)",
+      "toCoords": [24.6177, 73.8961]
+    }
+  ]
+}
+

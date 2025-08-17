@@ -1,0 +1,18 @@
+{
+  "name": "Air Arabia",
+  "flights": [
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Athens (ATH)",
+      "toCoords": [37.9364, 23.9445]
+    }
+  ],
+  "transit": [
+    {
+      "name": "Sharjah (SHJ)",
+      "coords": [25.3286, 55.5172]
+    }
+  ]
+}
+
