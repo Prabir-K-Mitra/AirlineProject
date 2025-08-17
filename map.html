@@ -50,6 +50,29 @@
       );
     }
 
+    /* Stripes for dep & transit */
+    .marker-dep-tra {
+      background: repeating-linear-gradient(
+        45deg,
+        green,
+        green 5px,
+        yellow 5px,
+        yellow 10px
+      );
+    }
+    
+    /* Stripes for arr & transit */
+    .marker-arr-tra {
+      background: repeating-linear-gradient(
+        45deg,
+        red,
+        red 5px,
+        yellow 5px,
+        yellow 10px
+      );
+    }
+    
+    
     /* Stripes for dep + arr + transit */
     .marker-all {
       background: repeating-linear-gradient(
@@ -96,9 +119,7 @@
     <h4 id="legend-title"></h4>
     <div class="legend-item"><span class="legend-color marker-departure"></span> Departure Only</div>
     <div class="legend-item"><span class="legend-color marker-arrival"></span> Arrival Only</div>
-    <div class="legend-item"><span class="legend-color marker-both"></span> Both Departure & Arrival (Striped)</div>
     <div class="legend-item"><span class="legend-color marker-transit"></span> Transit Only</div>
-    <div class="legend-item"><span class="legend-color marker-all"></span> Departure + Arrival + Transit</div>
     
     <p style="margin-top:10px; font-size: 13px;">
       This map doesn't differentiate between airport terminals, e.g. Delhi T1 and Delhi T3 are considered the same.
@@ -206,6 +227,8 @@
         let type;
         if (a.departures > 0 && a.arrivals > 0 && a.transit > 0) type = "marker-all";
         else if (a.departures > 0 && a.arrivals > 0) type = "marker-both";
+        else if (a.departures > 0 && a.transit > 0) type = "marker-dep-tra";
+        else if (a.arrivals > 0 && a.transit > 0) type = "marker-arr-tra";
         else if (a.departures > 0) type = "marker-departure";
         else if (a.arrivals > 0) type = "marker-arrival";
         else if (a.transit > 0) type = "marker-transit";
