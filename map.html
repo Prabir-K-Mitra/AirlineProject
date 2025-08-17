@@ -36,7 +36,7 @@
 
     /* Solid colors */
     .marker-departure { background-color: green; }
-    .marker-arrival   { background-color: blue; }
+    .marker-arrival   { background-color: red; }
     .marker-transit   { background-color: yellow; }
 
     /* Stripes */
@@ -45,8 +45,8 @@
         45deg,
         green,
         green 5px,
-        blue 5px,
-        blue 10px
+        red 5px,
+        red 10px
       );
     }
     .marker-all {
@@ -54,8 +54,8 @@
         45deg,
         green,
         green 5px,
-        blue 5px,
-        blue 10px,
+        red 5px,
+        red 10px,
         yellow 10px,
         yellow 15px
       );
@@ -93,10 +93,10 @@
   <div class="legend">
     <h4>Airport Color Scheme</h4>
     <div class="legend-item"><span class="legend-color marker-departure"></span> Departure Only (Green)</div>
-    <div class="legend-item"><span class="legend-color marker-arrival"></span> Arrival Only (Blue)</div>
+    <div class="legend-item"><span class="legend-color marker-arrival"></span> Arrival Only (red)</div>
     <div class="legend-item"><span class="legend-color marker-both"></span> Both Departure & Arrival (Striped)</div>
     <div class="legend-item"><span class="legend-color marker-transit"></span> Transit Only (Yellow)</div>
-    <div class="legend-item"><span class="legend-color marker-all"></span> All (Striped Green/Blue/Yellow)</div>
+    <div class="legend-item"><span class="legend-color marker-all"></span> All (Striped Green/red/Yellow)</div>
     <p style="margin-top:10px; font-size: 13px;">
       This map shows airports for the selected airline. Click markers for flight details.
     </p>
