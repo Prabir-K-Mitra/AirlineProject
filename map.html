@@ -132,15 +132,23 @@
 
           airportData[f.from].departures++;
           airportData[f.to].arrivals++;
-
-          // Transit detection (if marked in JSON)
-          if (f.transit) {
-            f.transit.forEach(t => {
-              if (!airportData[t.code]) airportData[t.code] = { name: t.code, coords: t.coords, departures: 0, arrivals: 0, transit: 0 };
-              airportData[t.code].transit++;
-            });
-          }
         });
+
+        // Add standalone transit airports (from JSON top-level "transit")
+        if (data.transit) {
+          data.transit.forEach(t => {
+            if (!airportData[t.name]) {
+              airportData[t.name] = { 
+                name: t.name, 
+                coords: t.coords, 
+                departures: 0, 
+                arrivals: 0, 
+                transit: 0 
+              };
+            }
+            airportData[t.name].transit++;
+          });
+        }
 
         // Initialize map
         const map = L.map('map').setView([20, 78], 4);
