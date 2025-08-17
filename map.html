@@ -49,17 +49,7 @@
         red 10px
       );
     }
-    .marker-all {
-      background: repeating-linear-gradient(
-        45deg,
-        green,
-        green 5px,
-        red 5px,
-        red 10px,
-        yellow 10px,
-        yellow 15px
-      );
-    }
+    
 
     /* Legend */
     .legend {
@@ -91,14 +81,14 @@
 
   <!-- Legend -->
   <div class="legend">
-    <h4>Airport Color Scheme</h4>
-    <div class="legend-item"><span class="legend-color marker-departure"></span> Departure Only (Green)</div>
-    <div class="legend-item"><span class="legend-color marker-arrival"></span> Arrival Only (red)</div>
+    <h4 id="legend-title"></h4>
+    <div class="legend-item"><span class="legend-color marker-departure"></span> Departure Only</div>
+    <div class="legend-item"><span class="legend-color marker-arrival"></span> Arrival Only</div>
     <div class="legend-item"><span class="legend-color marker-both"></span> Both Departure & Arrival (Striped)</div>
-    <div class="legend-item"><span class="legend-color marker-transit"></span> Transit Only (Yellow)</div>
-    <div class="legend-item"><span class="legend-color marker-all"></span> All (Striped Green/red/Yellow)</div>
+    <div class="legend-item"><span class="legend-color marker-transit"></span> Transit Only</div>
+    
     <p style="margin-top:10px; font-size: 13px;">
-      This map shows airports for the selected airline. Click markers for flight details.
+      This map doesn't differentiate between airport terminals, eg., Delhi T1 and Delhi T3 are considered as same.
     </p>
   </div>
 
@@ -117,15 +107,54 @@
 
     // Get airline from URL query
     const urlParams = new URLSearchParams(window.location.search);
-    const airlineFile = urlParams.get('airline'); // e.g., "indigo"
+    const airlineFile = urlParams.get('airline'); // e.g., "indigo" or "all"
 
-    fetch(`data/${airlineFile}.json`)
-      .then(res => res.json())
-      .then(data => {
-        document.title = `${data.name} Flight Map`;
+    // Your airline data files (add/remove as needed)
+    const airlinesList = [
+      "indigo", "goair", "jetairways", "airindia", "spicejet", "ethiopian", 
+      "airasia", "klm", "transavia", "airfrance", "wizzair", "qatar", 
+      "finnair", "airbaltic", "etihad", "vistara", "ryanair", "airarabia"
+    ];
 
-        // Count departures & arrivals per airport
-        const airportData = {};
+    async function loadData() {
+      let datasets = [];
+
+      if (airlineFile === "all") {
+        // Load all airline JSON files
+        for (const a of airlinesList) {
+          try {
+            const res = await fetch(`data/${a}.json`);
+            const data = await res.json();
+            datasets.push(data);
+          } catch (err) {
+            console.warn("Could not load:", a, err);
+          }
+        }
+      } else {
+        // Load only one airline JSON
+        const res = await fetch(`data/${airlineFile}.json`);
+        const data = await res.json();
+        datasets.push(data);
+      }
+
+      return datasets;
+    }
+
+    loadData().then(datasets => {
+      if (!datasets.length) {
+        alert("No flight data found.");
+        return;
+      }
+
+      if (airlineFile === "all") {
+        document.title = "All Airlines Flight Map";
+      } else {
+        document.title = `${datasets[0].name} Flight Map`;
+      }
+
+      // Count departures & arrivals per airport
+      const airportData = {};
+      datasets.forEach(data => {
         data.flights.forEach(f => {
           if (!airportData[f.from]) airportData[f.from] = { name: f.from, coords: f.fromCoords, departures: 0, arrivals: 0, transit: 0 };
           if (!airportData[f.to]) airportData[f.to] = { name: f.to, coords: f.toCoords, departures: 0, arrivals: 0, transit: 0 };
@@ -134,7 +163,6 @@
           airportData[f.to].arrivals++;
         });
 
-        // Add standalone transit airports (from JSON top-level "transit")
         if (data.transit) {
           data.transit.forEach(t => {
             if (!airportData[t.name]) {
@@ -149,43 +177,44 @@
             airportData[t.name].transit++;
           });
         }
-
-        // Initialize map
-        const map = L.map('map').setView([20, 78], 4);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-
-        // Add markers
-        const markers = [];
-        Object.values(airportData).forEach(a => {
-          let type;
-          if (a.departures > 0 && a.arrivals > 0 && a.transit > 0) type = "marker-all";
-          else if (a.departures > 0 && a.arrivals > 0) type = "marker-both";
-          else if (a.departures > 0) type = "marker-departure";
-          else if (a.arrivals > 0) type = "marker-arrival";
-          else if (a.transit > 0) type = "marker-transit";
-
-          const marker = L.marker(a.coords, { icon: customMarker(type) })
-            .addTo(map)
-            .bindPopup(`${a.name}<br>
-                        Departures: ${a.departures}<br>
-                        Arrivals: ${a.arrivals}<br>
-                        Transit: ${a.transit}`);
-
-          markers.push(marker);
-        });
-
-        // Fit map bounds to markers
-        if (markers.length > 0) {
-          const group = new L.featureGroup(markers);
-          map.fitBounds(group.getBounds(), { padding: [50, 50] });
-        }
-      })
-      .catch(err => {
-        console.error("Failed to load airline data:", err);
-        alert("Could not load flight data for this airline.");
       });
+
+      // Initialize map
+      const map = L.map('map').setView([20, 78], 4);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Add markers
+      const markers = [];
+      Object.values(airportData).forEach(a => {
+        let type;
+        if (a.departures > 0 && a.arrivals > 0 && a.transit > 0) type = "marker-all";
+        else if (a.departures > 0 && a.arrivals > 0) type = "marker-both";
+        else if (a.departures > 0) type = "marker-departure";
+        else if (a.arrivals > 0) type = "marker-arrival";
+        else if (a.transit > 0) type = "marker-transit";
+
+        const marker = L.marker(a.coords, { icon: customMarker(type) })
+          .addTo(map)
+          .bindPopup(`${a.name}<br>
+                      Departures: ${a.departures}<br>
+                      Arrivals: ${a.arrivals}<br>
+                      Transit: ${a.transit}`);
+
+        markers.push(marker);
+      });
+
+      // Fit map bounds to markers
+      if (markers.length > 0) {
+        const group = new L.featureGroup(markers);
+        map.fitBounds(group.getBounds(), { padding: [50, 50] });
+      }
+    })
+    .catch(err => {
+      console.error("Failed to load airline data:", err);
+      alert("Could not load flight data.");
+    });
   </script>
 
 </body>
