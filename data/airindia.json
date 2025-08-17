@@ -42,6 +42,12 @@
       "fromCoords": [28.5562, 77.1000],
       "to": "Udaipur (UDR)",
       "toCoords": [24.6177, 73.8961]
+    },
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
     }
   ]
 }
