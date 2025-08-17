@@ -31,6 +31,12 @@
       "to": "Udaipur (UDR)",
       "toCoords": [24.6177, 73.8961]
     }
+  ],
+  "transit": [
+    {
+      "name": "Delhi (DEL)",
+      "coords": [28.5562, 77.1000]
+    }
   ]
 }
 

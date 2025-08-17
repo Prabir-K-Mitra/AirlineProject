@@ -82,12 +82,6 @@
     {
       "from": "Ahmedabad (AMD)",
       "fromCoords": [23.0738, 72.6347],
-      "to": "Hyderabad (HYD)",
-      "toCoords": [17.2403, 78.4294]
-    },
-    {
-      "from": "Chennai (MAA)",
-      "fromCoords": [12.9941, 80.1709],
       "to": "Kolkata (CCU)",
       "toCoords": [22.652, 88.4467]
     },
@@ -118,6 +112,14 @@
     {
       "name": "Bhubaneswar (BBI)",
       "coords": [20.24444, 85.81778]
+    },
+    {
+      "name": "Mumbai (BOM)",
+      "coords": [19.0896, 72.8656]
+    },
+    {
+      "name": "Hyderabad (HYD)",
+      "coords": [17.2403, 78.4294]
     }
   ]
 }

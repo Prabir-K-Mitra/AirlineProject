@@ -28,12 +28,6 @@
     {
       "from": "Ahmedabad (AMD)",
       "fromCoords": [23.0738, 72.6347],
-      "to": "Bangalore (BLR)",
-      "toCoords": [13.1986, 77.7066]
-    },
-    {
-      "from": "Bangalore (BLR)",
-      "fromCoords": [13.1986, 77.7066],
       "to": "Kolkata (CCU)",
       "toCoords": [22.652, 88.4467]
     },
@@ -42,6 +36,12 @@
       "fromCoords": [18.5821, 73.9197],
       "to": "Ahmedabad (AMD)",
       "toCoords": [23.0738, 72.6347]
+    }
+  ],
+  "transit": [
+    {
+      "name": "Bangalore (BLR)",
+      "coords": [13.1986, 77.7066]
     }
   ]
 }
