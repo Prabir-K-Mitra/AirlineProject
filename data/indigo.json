@@ -102,6 +102,12 @@
       "fromCoords": [22.3362, 73.2263],
       "to": "Bangalore (BLR)",
       "toCoords": [13.1986, 77.7066]
+    },
+    {
+      "from": "Chennai (MAA)",
+      "fromCoords": [13.0827, 80.2707],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
     }
   ],
   "transit": [
