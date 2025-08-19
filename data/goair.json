@@ -16,12 +16,6 @@
     {
       "from": "Ahmedabad (AMD)",
       "fromCoords": [23.0738, 72.6347],
-      "to": "Lucknow (LKO)",
-      "toCoords": [26.7606, 80.8893]
-    },
-    {
-      "from": "Lucknow (LKO)",
-      "fromCoords": [26.7606, 80.8893],
       "to": "Kolkata (CCU)",
       "toCoords": [22.652, 88.4467]
     },
@@ -42,6 +36,10 @@
     {
       "name": "Bangalore (BLR)",
       "coords": [13.1986, 77.7066]
+    },
+    {
+      "name": "Lucknow (LKO)",
+      "coords": [26.7606, 80.8893]
     }
   ]
 }
