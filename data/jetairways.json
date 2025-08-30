@@ -1,12 +1,7 @@
 {
   "name": "Jet Airways",
   "flights": [
-    {
-      "from": "Mumbai (BOM)",
-      "fromCoords": [19.0896, 72.8656],
-      "to": "Udaipur (UDR)",
-      "toCoords": [24.6177, 73.8961]
-    },
+    
     {
       "from": "Udaipur (UDR)",
       "fromCoords": [24.6177, 73.8961],
@@ -36,6 +31,10 @@
     {
       "name": "Delhi (DEL)",
       "coords": [28.5562, 77.1000]
+    },
+    {
+      "name": "Mumbai (BOM)",
+      "coords": [19.0896, 72.8656]
     }
   ]
 }
