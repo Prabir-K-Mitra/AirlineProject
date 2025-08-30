@@ -1,18 +1,7 @@
 {
   "name": "Ethiopian Airlines",
   "flights": [
-    {
-      "from": "Mumbai (BOM)",
-      "fromCoords": [19.0896, 72.8656],
-      "to": "Addis Ababa (ADD)",
-      "toCoords": [8.9779, 38.7993]
-    },
-    {
-      "from": "Addis Ababa (ADD)",
-      "fromCoords": [8.9779, 38.7993],
-      "to": "Mumbai (BOM)",
-      "toCoords": [19.0896, 72.8656]
-    },
+
     {
       "from": "Addis Ababa (ADD)",
       "fromCoords": [8.9779, 38.7993],
@@ -25,6 +14,11 @@
       "to": "Addis Ababa (ADD)",
       "toCoords": [8.9779, 38.7993]
     }
-  ]
+  ],
+  "transit": [
+    {
+      "name": "Mumbai (BOM)",
+      "coords": [19.0896, 72.8656]
+    }]
 }
 
