@@ -12,6 +12,18 @@
       "fromCoords": [60.3172, 24.9633],
       "to": "Rovaniemi (RVN)",
       "toCoords": [66.5648, 25.8304]
+    },
+    {
+      "from": "Delhi (DEL)",
+      "fromCoords": [28.5562, 77.1000],
+      "to": "Helsinki (HEL)",
+      "fromCoords": [60.3172, 24.9633]
+    },
+    {
+      "from": "Helsinki (HEL)",
+      "fromCoords": [60.3172, 24.9633],
+      "to": "Vienna (VIE)",
+      "fromCoords": [48.1103, 16.5697]
     }
   ],
   "transit": []
