@@ -3,14 +3,14 @@
   "flights": [
     {
       "from": "Vienna (VIE)",
-      "toCoords": [48.1103, 16.5697],
+      "fromCoords": [48.1103, 16.5697],
       "to": "Delhi (DEL)",
-      "fromCoords": [28.5562, 77.1000]
+      "toCoords": [28.5562, 77.1000]
     }
   ],
   "transit": [
     {
-      "name": "Amsterdam (AMS)",
+      "name": "Baku (GYD)",
       "coords": [40.4675, 50.0467]
     }
   ]
