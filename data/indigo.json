@@ -108,6 +108,12 @@
       "fromCoords": [13.0827, 80.2707],
       "to": "Kolkata (CCU)",
       "toCoords": [22.652, 88.4467]
+    },
+    {
+      "from": "Vizag (VTZ)",
+      "fromCoords": [17.7212, 83.2245],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.652, 88.4467]
     }
   ],
   "transit": [

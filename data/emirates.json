@@ -1,0 +1,23 @@
+{
+  "name": "Emirates Airline",
+  "flights": [
+    {
+      "from": "Vienna (VIE)",
+      "fromCoords": [48.1103, 16.5697],
+      "to": "Kolkata (CCU)",
+      "toCoords": [22.6547, 88.4467]
+    },
+    {
+      "from": "Kolkata (CCU)",
+      "fromCoords": [22.6547, 88.4467],
+      "to": "Vienna (VIE)",
+      "toCoords": [48.1103, 16.5697]
+    }
+  ],
+  "transit": [
+    {
+      "name": "Dubai (DXB)",
+      "coords": [25.2532, 55.3657]
+    }
+  ]
+}
